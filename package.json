@@ -3,22 +3,26 @@
   "version": "1.0.0",
   "description": "Curl Card",
   "author": "Wes Souza <me@wesley.so>",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint src",
-    "dev": "nodemon ./src/index.js",
-    "start": "node ./src/index.js"
+    "node-watch": "sleep 0.5; nodemon --inspect ./dist/index.js",
+    "now-build": "tslint -c tslint.json -p tsconfig.json && npm run ts-build",
+    "lint": "tsc --noEmit && tslint -c tslint.json -p tsconfig.json",
+    "start": "node ./dist/index.js",
+    "ts-build": "tsc",
+    "ts-watch": "tsc -w",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run ts-watch\" \"npm run node-watch\""
   },
   "dependencies": {},
   "devDependencies": {
+    "@types/node": "^10.12.18",
     "acorn": "^6.0.4",
-    "eslint": "^5.10.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^3.0.0",
+    "concurrently": "^4.1.0",
     "nodemon": "^1.18.9",
-    "prettier": "^1.15.3"
+    "prettier": "^1.15.3",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
   }
 }
