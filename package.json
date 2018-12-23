@@ -14,7 +14,9 @@
     "ts-watch": "tsc -w",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run ts-watch\" \"npm run node-watch\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^2.4.1"
+  },
   "devDependencies": {
     "@types/node": "^10.12.18",
     "acorn": "^6.0.4",
