@@ -1,0 +1,24 @@
+{
+  "name": "wes-card",
+  "version": "1.0.0",
+  "description": "Curl Card",
+  "author": "Wes Souza <me@wesley.so>",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint src",
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "acorn": "^6.0.4",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "nodemon": "^1.18.9",
+    "prettier": "^1.15.3"
+  }
+}
