@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "wes-card",
-  "alias": ["card.wesley.so"],
-  "builds": [{ "src": "src/index.js", "use": "@now/node-server" }],
-  "routes": [{ "src": "/", "dest": "src/index.js" }]
+  "alias": ["wes-card"],
+  "builds": [{ "src": "src/index.ts", "use": "@now/node-server" }],
+  "routes": [{ "src": "/", "dest": "src/index.ts" }]
 }
