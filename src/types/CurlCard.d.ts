@@ -1,25 +1,7 @@
-export enum Color {
-  black = 'black',
-  blue = 'blue',
-  blueBright = 'blueBright',
-  cyan = 'cyan',
-  cyanBright = 'cyanBright',
-  gray = 'gray',
-  green = 'green',
-  greenBright = 'greenBright',
-  magenta = 'magenta',
-  magentaBright = 'magentaBright',
-  red = 'red',
-  redBright = 'redBright',
-  white = 'white',
-  whiteBright = 'whiteBright',
-  yellow = 'yellow',
-  yellowBright = 'yellowBright',
-}
-
-export interface IDataTheme {
-  background: Color;
-  foreground: Color;
+export interface IBoxParams {
+  content: string;
+  frame?: number;
+  frames?: number;
 }
 
 export interface ICardInfo {
