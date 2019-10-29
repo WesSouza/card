@@ -1,10 +1,10 @@
-export interface IBoxParams {
+export interface BoxParams {
   content: string;
   frame?: number;
   frames?: number;
 }
 
-export interface ICardInfo {
+export interface CardInfo {
   github?: string;
   headline?: string;
   instagram?: string;
@@ -14,7 +14,7 @@ export interface ICardInfo {
   website?: string;
 }
 
-export interface IOptions {
-  information: ICardInfo;
+export interface Options {
+  information: CardInfo;
   port?: number;
 }

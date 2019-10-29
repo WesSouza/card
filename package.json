@@ -6,25 +6,29 @@
   "main": "./dist/index.js",
   "license": "MIT",
   "scripts": {
-    "node-watch": "sleep 0.5; nodemon --inspect ./dist/index.js",
-    "now-build": "tslint -c tslint.json -p tsconfig.json && npm run ts-build",
-    "lint": "tsc --noEmit && tslint -c tslint.json -p tsconfig.json",
-    "start": "node ./dist/index.js",
-    "ts-build": "tsc",
-    "ts-watch": "tsc -w",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run ts-watch\" \"npm run node-watch\""
+    "dev-build": "tsc -w",
+    "dev-serve": "sleep 1; nodemon --inspect ./dist/index.js",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Server\" -c \"cyan.bold,green.bold\" \"npm run dev-build\" \"npm run dev-serve\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "now-build": "yarn run lint && yarn run ts-build",
+    "serve": "node ./dist/index.js",
+    "ts-build": "tsc"
   },
   "dependencies": {
     "chalk": "^2.4.1"
   },
   "devDependencies": {
     "@types/node": "^12.11.7",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
     "acorn": "^7.1.0",
     "concurrently": "^5.0.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "nodemon": "^1.19.4",
     "prettier": "1.18.2",
     "ts-node": "^8.4.1",
-    "tslint": "^5.20.0",
     "typescript": "^3.6.4"
   }
 }

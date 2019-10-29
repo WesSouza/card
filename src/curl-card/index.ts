@@ -1,13 +1,13 @@
 import http from 'http';
 
-import { IOptions } from '../types/CurlCard';
+import { Options } from '../types/CurlCard';
 
 import cardInformationFormat from './cardInformationFormat';
 import rainbowBox from './rainbowBox';
 
 const DefaultPort = 3000;
 
-export default ({ information, port = DefaultPort }: IOptions) => {
+export default ({ information, port = DefaultPort }: Options) => {
   const requestListener = (
     request: http.IncomingMessage,
     response: http.ServerResponse,

@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 
-import { ICardInfo } from '../types/CurlCard';
+import { CardInfo } from '../types/CurlCard';
 import { length, padCenter, padStart, padEnd } from '../utils/formattedString';
 
 const cardInformationFormat = ({
@@ -11,7 +11,7 @@ const cardInformationFormat = ({
   npm,
   twitter,
   website,
-}: ICardInfo) => {
+}: CardInfo) => {
   const highlightFormat = chalk.bold.cyan;
   const labelFormat = chalk.magenta;
   const textFormat = chalk.black;

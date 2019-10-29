@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 
-import { IBoxParams } from '../types/CurlCard';
+import { BoxParams } from '../types/CurlCard';
 import { length, padEnd } from '../utils/formattedString';
 
 enum Border {
@@ -20,10 +20,10 @@ const newMatrix = (x: number, y: number): number[][] =>
     Array.from<number>({ length: x }).fill(0),
   );
 
-const rainbowBox = ({ content, frame = 0, frames = 1 }: IBoxParams) => {
+const rainbowBox = ({ content /* frame = 0, frames = 1 */ }: BoxParams) => {
   const lines = content.split(/\r?\n/);
-  const linesLenghts = lines.map(line => length(line));
-  const boxContentWidth = Math.max(...linesLenghts);
+  const linesLengths = lines.map(line => length(line));
+  const boxContentWidth = Math.max(...linesLengths);
   const boxWidth = 2 * PaddingHorizontal + boxContentWidth + 2;
   const boxHeight = 2 * PaddingVertical + lines.length + 2;
 
