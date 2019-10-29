@@ -6,8 +6,8 @@ Displays an animated card when curling a URL from the terminal.
 
 ```sh
 # Server
-npm install
-npm run dev
+yarn install
+yarn run dev
 
 # Client
 curl localhost:3000
